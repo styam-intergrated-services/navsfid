@@ -854,6 +854,751 @@
         }
     </script>
 </body>
+</html>
+                            <i class="fa-solid fa-tag text-base mb-0.5"></i>
+                            <span>Services</span>
+                        </div>
+                        <div onclick="navigateTo('page-profile')" class="flex flex-col items-center cursor-pointer text-white/70 hover:text-white pb-1">
+                            <i class="fa-solid fa-gear text-base mb-0.5"></i>
+                            <span>Profile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-1 space-y-3.5 p-4 no-scrollbar overflow-y-auto">
+                <!-- Banking Accounts -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                    <div class="bg-gray-100 px-3 py-2 flex justify-between items-center text-xs font-bold text-bofa-navy border-b border-gray-200 tracking-wider">
+                        <span>BANKING ACCOUNTS (2)</span>
+                        <i class="fa-solid fa-plus text-bofa-navy text-xs cursor-pointer"></i>
+                    </div>
+                    <div class="divide-y divide-gray-100 text-xs">
+                        <div onclick="navigateTo('page-checking')" class="p-3 flex justify-between items-center cursor-pointer hover:bg-blue-50/50 transition">
+                            <div>
+                                <p class="font-bold text-gray-800">Checking Account 6320</p>
+                                <span class="text-[10px] text-bofa-navy font-semibold">View details &rarr;</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-sm text-bofa-navy">$2,114.00</span>
+                                <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                            </div>
+                        </div>
+                        <div onclick="navigateTo('page-savings')" class="p-3 flex justify-between items-center cursor-pointer hover:bg-blue-50/50 transition">
+                            <div>
+                                <p class="font-bold text-gray-800">Savings Account 2507</p>
+                                <span class="text-[10px] text-bofa-navy font-semibold">View details &rarr;</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-sm text-bofa-navy">$7,204.50</span>
+                                <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEBIT CARDS SECTION -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                    <div class="bg-gray-100 px-3 py-2 flex justify-between items-center text-xs font-bold text-bofa-navy border-b border-gray-200 tracking-wider">
+                        <span>DEBIT CARDS (1)</span>
+                        <i class="fa-solid fa-plus text-bofa-navy text-xs cursor-pointer"></i>
+                    </div>
+                    <div onclick="navigateTo('page-debitcard')" class="p-3 flex justify-between items-center cursor-pointer hover:bg-blue-50/50 transition">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-5 rounded bofa-navy flex items-center justify-center text-white text-[8px] font-extrabold tracking-tighter">
+                                DEBIT
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-xs">Visa® Debit Card 4912</p>
+                                <span class="text-[10px] text-gray-500">Linked to Checking 6320</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span id="debitStatusBadge" class="text-[9px] bg-green-100 text-green-700 font-bold px-1.5 py-0.5 rounded">Active</span>
+                            <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alert Banner -->
+                <div onclick="navigateTo('page-profile')" class="banner-red-gradient text-white p-3 rounded-lg text-xs flex justify-between items-center shadow cursor-pointer hover:brightness-105 transition">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-base"></i>
+                        <span class="font-medium">Monitor your account security & alerts</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <!-- Credit Cards -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                    <div class="bg-gray-100 px-3 py-2 flex justify-between items-center text-xs font-bold text-bofa-navy border-b border-gray-200 tracking-wider">
+                        <span>CREDIT CARDS (1)</span>
+                        <i class="fa-solid fa-plus text-bofa-navy text-xs cursor-pointer"></i>
+                    </div>
+                    <div onclick="navigateTo('page-creditcard')" class="p-3 flex justify-between items-start text-xs cursor-pointer hover:bg-blue-50/50 transition">
+                        <div>
+                            <p class="font-bold text-gray-800">Cash Rewards Card 1194</p>
+                            <span class="text-[10px] text-bofa-navy font-semibold">View details &rarr;</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="font-bold text-sm text-bofa-navy block">$1,361.00</span>
+                            <span class="text-[9px] text-gray-500 font-medium">Balance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions Grid -->
+                <div class="grid grid-cols-3 gap-2 text-white text-[10px]">
+                    <button onclick="navigateTo('page-analytics')" class="bofa-navy hover:bofa-navy-dark p-2.5 rounded flex items-center justify-center gap-1.5 shadow-sm font-semibold transition">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Spend Summary</span>
+                    </button>
+                    <button onclick="navigateTo('page-transfer')" class="bofa-navy hover:bofa-navy-dark p-2.5 rounded flex items-center justify-center gap-1.5 shadow-sm font-semibold transition">
+                        <i class="fa-solid fa-right-left"></i>
+                        <span>Transfer</span>
+                    </button>
+                    <button onclick="navigateTo('page-deposit')" class="bofa-navy hover:bofa-navy-dark p-2.5 rounded flex items-center justify-center gap-1.5 shadow-sm font-semibold transition">
+                        <i class="fa-solid fa-money-check"></i>
+                        <span>Deposit Check</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 3: CHECKING ACCOUNT DETAILS -->
+        <section id="page-checking" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 3 / 13 — Checking Account</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Accounts
+                    </button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-base font-bold">Checking Account 6320</span>
+                    <i onclick="navigateTo('page-help')" class="fa-regular fa-circle-question text-lg cursor-pointer"></i>
+                </div>
+            </div>
+
+            <div class="flex-1 space-y-3.5 p-4 no-scrollbar overflow-y-auto">
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                    <div class="p-3.5 space-y-2 border-b border-gray-100 text-xs">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-medium">Available Balance</span>
+                            <span class="font-bold text-base text-bofa-navy">$2,114.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-gray-500">
+                            <span>Posted Balance</span>
+                            <span class="font-semibold">$2,114.00</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 divide-x divide-gray-200 text-center text-xs font-bold text-bofa-navy py-2.5 bg-gray-50">
+                        <button onclick="navigateTo('page-transfer')" class="hover:text-bofa-red transition">Pay</button>
+                        <button onclick="navigateTo('page-transfer')" class="hover:text-bofa-red transition">Transfer</button>
+                        <button onclick="navigateTo('page-debitcard')" class="hover:text-bofa-red transition">Debit Card</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-3.5 shadow-sm border border-gray-200">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-bold text-gray-800 uppercase tracking-wider">Recent Transactions</span>
+                        <a href="#" class="text-[10px] text-bofa-navy font-bold hover:underline">See All</a>
+                    </div>
+                    <div class="space-y-3 text-xs">
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <div>
+                                <p class="font-bold text-gray-800">Online Merchant</p>
+                                <span class="text-[9px] text-gray-400">Aug 20, 2026</span>
+                            </div>
+                            <span class="font-bold text-bofa-navy">-$210.00</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <div>
+                                <p class="font-bold text-gray-800">Grocery Store</p>
+                                <span class="text-[9px] text-gray-400">Aug 19, 2026</span>
+                            </div>
+                            <span class="font-bold text-bofa-navy">-$70.21</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="font-bold text-gray-800">Gas Station</p>
+                                <span class="text-[9px] text-gray-400">Aug 18, 2026</span>
+                            </div>
+                            <span class="font-bold text-bofa-navy">-$23.40</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 4: TRANSFER MONEY -->
+        <section id="page-transfer" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 4 / 13 — Transfer</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Back
+                    </button>
+                </div>
+                <span class="text-base font-bold">Transfer Money</span>
+            </div>
+
+            <div class="flex-1 space-y-4 p-4 no-scrollbar overflow-y-auto">
+                <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                    <form onsubmit="handleTransferSubmit(event)" class="space-y-3">
+                        <div>
+                            <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">From Account</label>
+                            <select class="w-full bg-gray-50 border border-gray-300 rounded p-2.5 text-xs text-gray-800 outline-none focus:border-bofa-navy">
+                                <option>Checking Account 6320 ($2,114.00)</option>
+                                <option>Savings Account 2507 ($7,204.50)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">To Account</label>
+                            <select class="w-full bg-gray-50 border border-gray-300 rounded p-2.5 text-xs text-gray-800 outline-none focus:border-bofa-navy">
+                                <option>Savings Account 2507 ($7,204.50)</option>
+                                <option>Cash Rewards Credit Card 1194</option>
+                                <option>+ External Account</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">Amount ($)</label>
+                            <input type="number" step="0.01" placeholder="0.00" required class="w-full bg-gray-50 border border-gray-300 rounded p-2.5 text-xs font-semibold text-gray-800 outline-none focus:border-bofa-navy">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">Transfer Date</label>
+                            <input type="date" value="2026-08-21" class="w-full bg-gray-50 border border-gray-300 rounded p-2.5 text-xs text-gray-800 outline-none focus:border-bofa-navy">
+                        </div>
+                        <button type="submit" class="w-full bofa-red bofa-red-hover text-white font-bold py-3 rounded shadow transition text-xs uppercase tracking-wider mt-2">
+                            Make Transfer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 5: SERVICES & OFFERS -->
+        <section id="page-services" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 5 / 13 — Services</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Home
+                    </button>
+                </div>
+                <span class="text-base font-bold">Services & Deals</span>
+            </div>
+
+            <div class="flex-1 space-y-3 p-4 no-scrollbar overflow-y-auto">
+                <div onclick="navigateTo('page-savings')" class="bg-white rounded-lg p-3 shadow-sm border border-gray-200 flex items-center gap-3 cursor-pointer hover:bg-gray-50">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 text-bofa-navy flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-xs font-bold text-gray-800">Featured Savings APY</h4>
+                        <p class="text-[10px] text-gray-500">Earn up to 4.50% APY on high yield deposits.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                </div>
+
+                <div class="bg-white rounded-lg p-3 shadow-sm border border-gray-200 flex items-center gap-3 cursor-pointer hover:bg-gray-50">
+                    <div class="w-10 h-10 rounded-full bg-red-50 text-bofa-red flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-xs font-bold text-gray-800">Cashback Deals</h4>
+                        <p class="text-[10px] text-gray-500">Activate deals to earn up to 10% back.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                </div>
+
+                <div onclick="navigateTo('page-analytics')" class="bg-white rounded-lg p-3 shadow-sm border border-gray-200 flex items-center gap-3 cursor-pointer hover:bg-gray-50">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 text-bofa-navy flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-xs font-bold text-gray-800">FICO Score & Health</h4>
+                        <p class="text-[10px] text-gray-500">Monitor credit score changes monthly for free.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 6: PROFILE & SETTINGS -->
+        <section id="page-profile" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 6 / 13 — Profile</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Home
+                    </button>
+                </div>
+                <span class="text-base font-bold">Profile & Settings</span>
+            </div>
+
+            <div class="flex-1 space-y-4 p-4 no-scrollbar overflow-y-auto">
+                <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200 text-center">
+                    <div class="w-14 h-14 rounded-full bofa-navy text-white flex items-center justify-center text-xl font-bold mx-auto mb-2">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3 id="profileName" class="text-sm font-bold text-gray-800">Demo User</h3>
+                    <p class="text-[10px] text-gray-500">Online Banking Client</p>
+                </div>
+
+                <div class="bg-white rounded-lg divide-y divide-gray-100 text-xs shadow-sm border border-gray-200">
+                    <div onclick="navigateTo('page-debitcard')" class="p-3 flex justify-between items-center cursor-pointer hover:bg-gray-50">
+                        <span class="text-gray-700 font-semibold">Debit Card Management</span>
+                        <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                    </div>
+                    <div onclick="navigateTo('page-card-controls')" class="p-3 flex justify-between items-center cursor-pointer hover:bg-gray-50">
+                        <span class="text-gray-700 font-semibold">Security & Card Lock</span>
+                        <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                    </div>
+                    <div onclick="navigateTo('page-help')" class="p-3 flex justify-between items-center cursor-pointer hover:bg-gray-50">
+                        <span class="text-gray-700 font-semibold">Help & Contact Us</span>
+                        <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                    </div>
+                    <div class="p-3 flex justify-between items-center">
+                        <span class="text-gray-700 font-semibold">Push Notifications</span>
+                        <input type="checkbox" checked class="rounded border-gray-300 text-bofa-navy">
+                    </div>
+                    <div class="p-3 flex justify-between items-center cursor-pointer hover:bg-gray-50" onclick="handleLogout()">
+                        <span class="text-bofa-red font-bold">Sign Out</span>
+                        <i class="fa-solid fa-right-from-bracket text-bofa-red text-xs"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 7: SAVINGS ACCOUNT DETAILS -->
+        <section id="page-savings" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 7 / 13 — Savings</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Accounts
+                    </button>
+                </div>
+                <span class="text-base font-bold">Savings Account 2507</span>
+            </div>
+
+            <div class="flex-1 space-y-3.5 p-4 no-scrollbar overflow-y-auto">
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                    <div class="p-3.5 space-y-2 border-b border-gray-100 text-xs">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-medium">Available Balance</span>
+                            <span class="font-bold text-base text-bofa-navy">$7,204.50</span>
+                        </div>
+                        <div class="flex justify-between items-center text-green-700 font-semibold">
+                            <span>Interest Earned YTD</span>
+                            <span>+$142.30</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 divide-x divide-gray-200 text-center text-xs font-bold text-bofa-navy py-2.5 bg-gray-50">
+                        <button onclick="navigateTo('page-transfer')" class="hover:text-bofa-red transition">+ Add Funds</button>
+                        <button onclick="navigateTo('page-transfer')" class="hover:text-bofa-red transition">Transfer Out</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 8: CREDIT CARD DETAILS -->
+        <section id="page-creditcard" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 8 / 13 — Credit Card</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Accounts
+                    </button>
+                </div>
+                <span class="text-base font-bold">Cash Rewards Card 1194</span>
+            </div>
+
+            <div class="flex-1 space-y-3.5 p-4 no-scrollbar overflow-y-auto">
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                    <div class="p-3.5 space-y-2 border-b border-gray-100 text-xs">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-medium">Current Balance</span>
+                            <span class="font-bold text-base text-bofa-navy">$1,361.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-gray-500">
+                            <span>Available Credit</span>
+                            <span class="font-semibold">$8,639.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-bofa-red font-bold">
+                            <span>Payment Due Date</span>
+                            <span>Sep 15, 2026</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 divide-x divide-gray-200 text-center text-xs font-bold text-bofa-navy py-2.5 bg-gray-50">
+                        <button onclick="navigateTo('page-transfer')" class="hover:text-bofa-red transition">Make Payment</button>
+                        <button onclick="navigateTo('page-card-controls')" class="hover:text-bofa-red transition">Card Controls</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 9: MOBILE CHECK DEPOSIT -->
+        <section id="page-deposit" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 9 / 13 — Check Deposit</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Back
+                    </button>
+                </div>
+                <span class="text-base font-bold">Deposit a Check</span>
+            </div>
+
+            <div class="flex-1 space-y-4 p-4 no-scrollbar overflow-y-auto">
+                <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                    <form onsubmit="handleDepositSubmit(event)" class="space-y-3">
+                        <div>
+                            <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">Deposit To Account</label>
+                            <select class="w-full bg-gray-50 border border-gray-300 rounded p-2.5 text-xs text-gray-800 outline-none focus:border-bofa-navy">
+                                <option>Checking Account 6320 ($2,114.00)</option>
+                                <option>Savings Account 2507 ($7,204.50)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">Check Amount ($)</label>
+                            <input type="number" step="0.01" placeholder="0.00" required class="w-full bg-gray-50 border border-gray-300 rounded p-2.5 text-xs font-semibold text-gray-800 outline-none focus:border-bofa-navy">
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-2 pt-1">
+                            <div class="border-2 border-dashed border-gray-300 rounded p-3 text-center cursor-pointer hover:bg-blue-50/50 transition">
+                                <i class="fa-solid fa-camera text-bofa-navy text-lg mb-1"></i>
+                                <span class="block text-[10px] font-bold text-gray-700">Front of Check</span>
+                            </div>
+                            <div class="border-2 border-dashed border-gray-300 rounded p-3 text-center cursor-pointer hover:bg-blue-50/50 transition">
+                                <i class="fa-solid fa-camera text-bofa-navy text-lg mb-1"></i>
+                                <span class="block text-[10px] font-bold text-gray-700">Back of Check</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bofa-red bofa-red-hover text-white font-bold py-3 rounded shadow transition text-xs uppercase tracking-wider mt-2">
+                            Deposit Check
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 10: SPEND SUMMARY & ANALYTICS -->
+        <section id="page-analytics" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 10 / 13 — Spend Summary</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Back
+                    </button>
+                </div>
+                <span class="text-base font-bold">Spending & Budgeting</span>
+            </div>
+
+            <div class="flex-1 space-y-4 p-4 no-scrollbar overflow-y-auto">
+                <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-bold text-gray-800">August 2026 Spending</span>
+                        <span class="text-xs font-bold text-bofa-navy">$1,280.41</span>
+                    </div>
+                    <div class="flex items-end justify-between h-24 gap-2 pt-4 border-b border-gray-100 pb-2">
+                        <div class="w-full bg-blue-100 rounded-t h-12 flex flex-col justify-end text-center"><span class="text-[8px] mb-1">May</span></div>
+                        <div class="w-full bg-blue-200 rounded-t h-20 flex flex-col justify-end text-center"><span class="text-[8px] mb-1">Jun</span></div>
+                        <div class="w-full bg-blue-300 rounded-t h-16 flex flex-col justify-end text-center"><span class="text-[8px] mb-1">Jul</span></div>
+                        <div class="w-full bofa-navy rounded-t h-22 flex flex-col justify-end text-center text-white"><span class="text-[8px] mb-1 font-bold">Aug</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 11: CARD CONTROLS & SECURITY -->
+        <section id="page-card-controls" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 11 / 13 — Card Lock</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Back
+                    </button>
+                </div>
+                <span class="text-base font-bold">Security & Controls</span>
+            </div>
+
+            <div class="flex-1 space-y-4 p-4 no-scrollbar overflow-y-auto">
+                <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200 space-y-3">
+                    <div class="flex justify-between items-center p-2.5 bg-gray-50 rounded">
+                        <div>
+                            <p class="font-bold text-xs text-gray-800">Lock Card Temporarily</p>
+                            <p class="text-[10px] text-gray-500">Instantly block new transactions</p>
+                        </div>
+                        <input type="checkbox" onchange="handleCardLockToggle(this)" class="w-4 h-4 text-bofa-navy">
+                    </div>
+                    <div class="flex justify-between items-center p-2.5 bg-red-50 rounded cursor-pointer hover:bg-red-100">
+                        <div>
+                            <p class="font-bold text-xs text-bofa-red">Report Lost or Stolen</p>
+                            <p class="text-[10px] text-red-600">Order immediate replacement</p>
+                        </div>
+                        <i class="fa-solid fa-triangle-exclamation text-bofa-red"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 12: HELP & SUPPORT -->
+        <section id="page-help" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 12 / 13 — Support</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Back
+                    </button>
+                </div>
+                <span class="text-base font-bold">Help & Support</span>
+            </div>
+
+            <div class="flex-1 space-y-3 p-4 no-scrollbar overflow-y-auto">
+                <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                    <h3 class="text-xs font-bold text-gray-800 uppercase tracking-wider mb-3">Customer Service</h3>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-3 bg-blue-50/50 rounded border border-blue-100 flex items-center gap-3 cursor-pointer">
+                            <i class="fa-solid fa-phone text-bofa-navy text-lg"></i>
+                            <div>
+                                <p class="font-bold text-bofa-navy">Call Support 24/7</p>
+                                <p class="text-[10px] text-gray-600">1-800-555-0199</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PAGE 13: DEBIT CARD MANAGEMENT -->
+        <section id="page-debitcard" class="page-view hidden h-full flex flex-col justify-between bg-bofa-canvas no-scrollbar overflow-y-auto">
+            <div class="bofa-navy p-4 pb-3 text-white">
+                <div class="flex justify-between items-center text-xs text-white/50 font-mono mb-2">
+                    <span>Page 13 / 13 — Debit Card Details</span>
+                    <button onclick="navigateTo('page-homescreen')" class="text-white font-semibold text-xs flex items-center gap-1 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Home
+                    </button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-base font-bold">Debit Card Controls</span>
+                    <span class="text-[10px] bg-white/20 px-2 py-0.5 rounded text-white font-medium">Checking 6320</span>
+                </div>
+            </div>
+
+            <div class="flex-1 space-y-4 p-4 no-scrollbar overflow-y-auto">
+                <!-- Visual Card Widget -->
+                <div class="card-gradient rounded-2xl p-4 text-white shadow-xl relative overflow-hidden">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-building-columns text-lg"></i>
+                            <span class="text-xs font-bold tracking-widest uppercase">APEX BANK</span>
+                        </div>
+                        <i class="fa-solid fa-wifi rotate-90 text-sm text-white/70"></i>
+                    </div>
+
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-7 bg-amber-300 rounded flex items-center justify-center opacity-90 border border-amber-200">
+                            <i class="fa-solid fa-microchip text-amber-800 text-xs"></i>
+                        </div>
+                        <span class="text-xs font-mono tracking-widest text-white/90">•••• •••• •••• 4912</span>
+                    </div>
+
+                    <div class="flex justify-between items-end text-xs">
+                        <div>
+                            <span class="text-[9px] text-white/60 uppercase block">Cardholder</span>
+                            <span id="cardholderName" class="font-bold tracking-wide">DEMO USER</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-[9px] text-white/60 uppercase block">Expires</span>
+                            <span class="font-bold font-mono">08/29</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Actions -->
+                <div class="bg-white rounded-lg p-3.5 shadow-sm border border-gray-200 space-y-3">
+                    <h3 class="text-xs font-bold text-gray-800 uppercase tracking-wider mb-1">Card Security & Lock</h3>
+                    
+                    <div class="flex justify-between items-center p-2.5 bg-gray-50 rounded border border-gray-100">
+                        <div>
+                            <p class="font-bold text-xs text-gray-800">Lock Debit Card</p>
+                            <p class="text-[10px] text-gray-500">Temporarily block card purchases and ATM access</p>
+                        </div>
+                        <input type="checkbox" id="debitLockToggle" onchange="toggleDebitLock(this)" class="w-4 h-4 text-bofa-navy rounded focus:ring-bofa-navy">
+                    </div>
+
+                    <div onclick="alert('PIN Change Request Sent via SMS Verification')" class="flex justify-between items-center p-2.5 bg-gray-50 rounded border border-gray-100 cursor-pointer hover:bg-gray-100 transition">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-key text-bofa-navy"></i>
+                            <div>
+                                <p class="font-bold text-xs text-gray-800">Change ATM PIN</p>
+                                <p class="text-[10px] text-gray-500">Reset your 4-digit debit PIN</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                    </div>
+
+                    <div onclick="alert('Digital Wallet Pass issued to Apple/Google Pay')" class="flex justify-between items-center p-2.5 bg-gray-50 rounded border border-gray-100 cursor-pointer hover:bg-gray-100 transition">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-wallet text-bofa-navy"></i>
+                            <div>
+                                <p class="font-bold text-xs text-gray-800">Add to Mobile Wallet</p>
+                                <p class="text-[10px] text-gray-500">Apple Pay & Google Pay ready</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Spending & ATM Limits -->
+                <div class="bg-white rounded-lg p-3.5 shadow-sm border border-gray-200 space-y-2.5">
+                    <h3 class="text-xs font-bold text-gray-800 uppercase tracking-wider">Daily Spending & ATM Limits</h3>
+                    
+                    <div class="space-y-1.5 text-xs">
+                        <div class="flex justify-between text-gray-700">
+                            <span>Daily Purchase Limit</span>
+                            <span class="font-bold text-bofa-navy">$2,500.00</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                            <div class="bofa-navy h-1.5 rounded-full" style="width: 28%"></div>
+                        </div>
+                        <span class="text-[9px] text-gray-400 block">$704.21 used today</span>
+                    </div>
+
+                    <div class="space-y-1.5 text-xs pt-2">
+                        <div class="flex justify-between text-gray-700">
+                            <span>Daily ATM Withdrawal Limit</span>
+                            <span class="font-bold text-bofa-navy">$1,000.00</span>
+                        </div>
+                        <div class="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                            <div class="bofa-navy h-1.5 rounded-full" style="width: 0%"></div>
+                        </div>
+                        <span class="text-[9px] text-gray-400 block">$0.00 withdrawn today</span>
+                    </div>
+                </div>
+
+                <button onclick="alert('Replacement debit card requested. Delivery in 3-5 business days.')" class="w-full border border-bofa-red text-bofa-red hover:bg-red-50 font-bold py-2.5 rounded transition text-xs uppercase tracking-wider">
+                    Replace Lost or Damaged Card
+                </button>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JAVASCRIPT APP CONTROLLER -->
+    <script>
+        const state = {
+            isAuthenticated: false,
+            username: '',
+            debitCardLocked: false
+        };
+
+        function navigateTo(pageId) {
+            if (pageId !== 'page-signin' && !state.isAuthenticated) {
+                navigateTo('page-signin');
+                return;
+            }
+
+            document.querySelectorAll('.page-view').forEach(view => {
+                view.classList.add('hidden');
+            });
+
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const userIdInput = document.getElementById('userId').value.trim();
+            const passwordInput = document.getElementById('password').value.trim();
+            const errorElement = document.getElementById('loginError');
+            const spinner = document.getElementById('loginSpinner');
+            const submitBtn = document.getElementById('submitBtn');
+
+            if (!userIdInput || !passwordInput) {
+                errorElement.innerText = "Please fill in all required fields.";
+                errorElement.classList.remove('hidden');
+                return;
+            }
+
+            errorElement.classList.add('hidden');
+            spinner.classList.remove('hidden');
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                spinner.classList.add('hidden');
+                submitBtn.disabled = false;
+
+                state.isAuthenticated = true;
+                state.username = userIdInput;
+
+                document.getElementById('welcomeUser').innerText = `Welcome, ${state.username}!`;
+                document.getElementById('profileName').innerText = state.username;
+                document.getElementById('cardholderName').innerText = state.username.toUpperCase();
+
+                navigateTo('page-homescreen');
+            }, 500);
+        }
+
+        function toggleDebitLock(checkbox) {
+            state.debitCardLocked = checkbox.checked;
+            const badge = document.getElementById('debitStatusBadge');
+            
+            if (checkbox.checked) {
+                badge.innerText = "Locked";
+                badge.className = "text-[9px] bg-red-100 text-bofa-red font-bold px-1.5 py-0.5 rounded";
+                alert("Debit card 4912 has been TEMPORARILY LOCKED.");
+            } else {
+                badge.innerText = "Active";
+                badge.className = "text-[9px] bg-green-100 text-green-700 font-bold px-1.5 py-0.5 rounded";
+                alert("Debit card 4912 is now UNLOCKED and ready to use.");
+            }
+        }
+
+        function handleTransferSubmit(event) {
+            event.preventDefault();
+            alert('Transfer Submitted Successfully!');
+            navigateTo('page-checking');
+        }
+
+        function handleDepositSubmit(event) {
+            event.preventDefault();
+            alert('Check Deposit Received!');
+            navigateTo('page-checking');
+        }
+
+        function handleCardLockToggle(checkbox) {
+            alert(checkbox.checked ? 'Card LOCKED' : 'Card UNLOCKED');
+        }
+
+        function handleLogout() {
+            state.isAuthenticated = false;
+            state.username = '';
+            
+            document.getElementById('loginForm').reset();
+            document.getElementById('loginError').classList.add('hidden');
+
+            navigateTo('page-signin');
+        }
+    </script>
+</body>
 </html>                            <i class="fa-solid fa-tag text-base mb-0.5"></i>
                             <span>Services</span>
                         </div>
